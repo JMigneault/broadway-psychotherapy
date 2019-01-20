@@ -1,0 +1,376 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* added resets */
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* styling classes */
+@font-face {
+    font-family: Flamenco;
+    src: url(resources/Flamenco-Regular.ttf);
+}
+
+.bold-text {
+	font-weight: bold;
+}
+
+.flamenco {
+	font-family: "Flamenco", Flamenco, serif;
+}
+
+.quattrocento {
+	font-family: "Quattrocento Sans", Quattrocento Sans, sans-serif;
+}
+
+.black-text {
+	color: #414141;
+}
+
+/* MAIN */
+
+/* font sizes and line spacing */
+
+#inner-wrapper-banner {
+	font-size: 21.5px;
+}
+
+#company-name {
+	font-size: 60px;
+}
+
+#address {
+	font-size: 36px;
+	line-height: 120%;
+}
+
+.nav-button > a {
+	font-size: 22px;
+}
+
+.drop-down-button > a {
+	font-size: 20px;
+}
+
+#page-title {
+	font-size: 40px;
+}
+
+#message, #paragraphs-text p, ul {
+	font-size: 18px;
+	line-height: 120%;
+}
+
+#message{
+	font-style: italic;
+}
+
+#footer h4 {
+	font-size: 16px;
+	line-height: 120%;
+}
+
+.in-p-emphasis {
+	font-size: 20px;
+}
+
+/* colors */
+
+body {
+	color:#f8fbe4;
+	background: #9facb5;
+}
+
+#inner-wrapper-upper, #inner-wrapper-footer {
+	background: #93a68d;
+}
+
+#inner-wrapper-banner {
+	background: #fffa97;
+}
+
+#banner {
+	background: #dadec3;
+}
+
+#inner-wrapper-content{
+	background: #dadec3;
+}
+
+#page-title {
+	color: #2A7EA7;
+	/*Old color: #6e909f; */
+}
+
+#paragraphs-text a {
+	color: #2A7EA7;
+}
+
+#paragraphs-text a:hover {
+	text-decoration: underline;
+}
+
+/* wrapping, max width, and centering */
+#wrapper {
+	max-width: 1024px;
+	margin: auto;
+}
+
+#inner-wrapper-upper, #inner-wrapper-content, #inner-wrapper-footer, #inner-wrapper-banner {
+	padding-left: 52px; padding-right: 52px;
+}
+
+#inner-wrapper-banner {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+/* header formatting */
+#company-name {
+	padding-top: 45px;
+	float: left;
+}
+
+#address {
+	padding-top: 50px;
+	float: right;
+}
+
+/* clear fix */
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* nav bar formatting */
+#nav-bar {
+	float: right;
+	margin-top: 20px;
+}
+
+#nav-bar > li {
+	display: inline-block;
+}
+
+/* clear fix */
+#navigation:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* spacing between and around buttons */
+.nav-button {
+	padding-bottom: 5px;
+}
+
+.nav-button > a {
+	padding: 7px;
+	border: 1px solid transparent;
+}
+
+#drop-down-menu {
+	margin-top: 5px;
+}
+
+.drop-down-button {
+	padding: 6px;
+}
+
+#sarah {
+	padding-top: 0px;
+}
+
+/* highlighting of dropdown box, current page button and moused over buttons
+(also add dropdown box shadow)*/
+#current-page {
+	background: #6e909f;
+	border: 1px dotted #414141;
+}
+
+.nav-button > a:hover{
+	background: #6e909f;
+	border: 1px dotted #414141;
+}
+
+.drop-down-button:hover a {
+	color: #e3b255;
+}
+
+#drop-down-menu {
+	background: #6e909f;
+	border: 1px dotted #414141;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* hide dropdown menu offscreen and then restore when buttin is hovered*/
+#drop-down-menu {
+	position: absolute;
+	left: -9999px;
+}
+
+#drop-down-li:hover ul {
+	left:auto;
+}
+
+/* keep button highlighted while drop-down is moused over */
+#nav-bar > li:hover > a {
+	background: #6e909f;
+	border: 1px dotted #414141;
+}
+
+/* add arrow next to dropdown button */
+#drop-down-li > a:after {
+	content: " \25BC";
+	font-size: .5em;
+	display: inline;
+}
+
+/* fix banner position */
+#banner img {
+	position: relative;
+	left: -1px;
+}
+
+#drop-down-menu {
+		z-index: 1000;
+}
+
+/* content formatting */
+#page-title {
+	padding-top: 45px;
+}
+#paragraphs {
+	margin-top: 45px;
+	padding-bottom: 35px;
+}
+
+#paragraphs-text {
+	max-width: 410px;
+	float: left;
+}
+
+#jeff-page #paragraphs-text {
+	max-width: 440px;
+}
+
+#appt-fees #paragraphs-text {
+	max-width: 920px;
+}
+
+#paragraphs-text > div {
+	padding-top: 45px;
+}
+
+#paragraphs-image {
+	float: right;
+}
+
+#sarah-page #paragraphs-image img {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: block;
+}
+#sarah-page #paragraphs-text {
+	padding-bottom: 40px;
+}
+
+.appt-fees-bul-lst {
+	list-style-type: disc;
+	padding: 15px;
+}
+
+.appt-fees-bul-lst span {
+	float: right;
+	/* horizontally aligns fees */
+	padding-right: 570px;
+}
+
+#video {
+	padding-left: 40px;
+	padding-bottom: 40px;
+}
+
+/* clear fix */
+#paragraphs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* footer formatting */
+#footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#copyright {
+	float: left;
+	margin-top: 33px;
+}
+
+#contact-info {
+	float: right;
+}
+
+/* clear fix */
+#footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
