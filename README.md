@@ -1,4 +1,4 @@
-### Description
+# Broadway Psychotherapy
 This website was created in 2017 for __Broadway Psychotherapy__, a two person
 psychotherapy practice in Providence, RI.  It was made from scratch in
 pure HTML and CSS with no external libraries.
